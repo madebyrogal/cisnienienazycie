@@ -1,0 +1,42 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Acard - dodawanie wideo{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <table>
+        <tr>
+            <td class="label">{{ form_label(form.poster) }}</td>
+            <td>
+                {{ form_widget(form.poster) }}
+                {% if form.poster.vars.errors|length %}
+                    <br>{{ form_errors(form.poster) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">{{ form_label(form.label) }}</td>
+            <td>
+                {{ form_widget(form.label) }}
+                {% if form.label.vars.errors|length %}
+                    <br>{{ form_errors(form.label) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">{{ form_label(form.url) }}</td>
+            <td>
+                {{ form_widget(form.url) }}
+                {% if form.url.vars.errors|length %}
+                    <br>{{ form_errors(form.url) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ form_widget(form.submit) }}</td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    {{ form_end(form) }}
+{% endblock %}

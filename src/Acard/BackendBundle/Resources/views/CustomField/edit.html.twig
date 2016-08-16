@@ -1,0 +1,23 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Acard - Edycja licznika{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <table>
+        <tr>
+            <td class="label">{{ form.vars.data.label }}</td>
+            <td>
+                {{ form_widget(form.value) }}
+                {% if form.value.vars.errors|length %}
+                    <br>{{ form_errors(form.value) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">{{ form_widget(form.submit) }}</td>
+            <td></td>
+        </tr>
+    </table>
+    {{ form_end(form) }}
+{% endblock %}

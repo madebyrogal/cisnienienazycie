@@ -1,0 +1,12 @@
+acard_backend_custom_field_index:
+    pattern:  /custom_field
+    defaults: { _controller: AcardBackendBundle:CustomField:list }
+acard_backend_custom_field_edit:
+    pattern:  /custom_field/{id}
+    defaults: { _controller: AcardBackendBundle:CustomField:edit }
+acard_backend_custom_field_create:
+    pattern:  /custom_field/create
+    defaults: { _controller: AcardBackendBundle:CustomField:create }
+acard_backend_custom_field_delete:
+    pattern:  /custom_field/delete/{id}
+    defaults: { _controller: AcardBackendBundle:CustomField:delete }

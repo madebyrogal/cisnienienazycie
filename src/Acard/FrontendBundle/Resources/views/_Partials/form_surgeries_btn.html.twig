@@ -1,0 +1,27 @@
+<form id="cityForm" action="{{ url('acard_frontend_surgeries') }}" method="post">
+    <div class="formbox dropdown-holder rightColumn">
+        <div class="selectBoxSearch">
+            <input id="selectInputCity" placeholder="Wybierz miasto" class="selected" autocomplete="off"/>
+            <span class="selectArrow"></span>
+            <div class="selectOptionsWrapper">
+                <div class="selectOptions mCustomScrollbar _mCS_1 hide">
+                    <div id="mCSB_1" class="mCustomScrollBox mCS-light">
+                        <div class="mCSB_container mCS_no_scrollbar">
+                            {% render( controller('AcardFrontendBundle:Surgeries:city')) %}
+                        </div>
+                        <div class="mCSB_scrollTools">
+                            <div class="mCSB_draggerContainer">
+                                <div oncontextmenu="return false;" class="mCSB_dragger">
+                                    <div class="mCSB_dragger_bar"></div>
+                                </div>
+                                <div class="mCSB_draggerRail"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input name="city" id="city" type="hidden" />
+    <a class="btn read-more" href="javascript:document.getElementById('cityForm').submit();"><span>Szukaj</span></a>
+</form>

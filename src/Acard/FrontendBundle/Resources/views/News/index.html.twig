@@ -1,0 +1,54 @@
+{% extends "AcardFrontendBundle::page_layout.html.twig" %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    {{ include('AcardFrontendBundle:_Partials:stats_small.html.twig', {}) }}
+    <section class="page-content">
+        <div class="wrapper">
+            <div class="col-sm-8 page-content-article">
+                {% block content %}
+                    <div class="col-sm-8 page-content-article {{ page.wrapperCssClass }}">
+                        <header class="page-content-header">Aktualności</header>
+                        {% for n in news %}
+                        <article {% if( loop.index == 1) %}class="first"{% endif %}>
+                            <a href="{{ path('acard_frontend_news_show', {'id': n.id, 'slug': n.slug}) }}"><img src="/uploads/news/{{n.fileThumb1}}" alt="{{n.title}}" style="float: left; margin: 0 20px 0 0;"/></a>
+                            <h3>{{n.title|slice(0, 70)}}</h3>
+                            <div class="sneak">{{n.sneakPeak|slice(0, 160) ~ '...'}}</div>
+                            <span class='stick'></span>
+                            <a class="btn read-more" href="{{ path('acard_frontend_news_show', {'id': n.id, 'slug': n.slug}) }}"><span>Czytaj więcej</span></a>
+                            <div class="clearfix"></div>
+                        </article>
+                        {% endfor %}
+
+                        {% if maxPages > 1 %}
+                            <ul class="pagination pagination-sm">
+                                {# `«` arrow  #}
+                                <li {{ thisPage == 1 ? 'class="disabled"' }}>
+                                    <a href="{{ path('acard_frontend_news_index', {page: thisPage-1 < 1 ? 1 : thisPage-1}) }}">«</a>
+                                </li>
+
+                                {# Render each page number #}
+                                {% for i in 1..maxPages %}
+                                    <li {{ thisPage == i ? 'class="active"' }}>
+                                        <a href="{{ path('acard_frontend_news_index', {page: i}) }}">{{ i }}</a>
+                                    </li>
+                                {% endfor %}
+
+                                {# `»` arrow #}
+                                <li {{ thisPage == maxPages ? 'class="disabled"' }}>
+                                    <a href="{{ path('acard_frontend_news_index', {page: thisPage+1 <= maxPages ? thisPage+1 : thisPage}) }}">»</a>
+                                </li>
+                            </ul>
+                        {% endif %}
+                    </div>
+                {% endblock %}
+            </div>
+            {{ include('AcardFrontendBundle:_Partials:calendarium.html.twig', {}) }}
+        </div>
+    </section>
+    {{ include('AcardFrontendBundle:_Partials:modal_video.html.twig', {}) }}
+    {{ include('AcardFrontendBundle:_Partials:teasers.html.twig', {}) }}
+{% endblock %}

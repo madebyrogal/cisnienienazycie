@@ -1,0 +1,18 @@
+acard_backend_city_create:
+    pattern:  /city/create
+    defaults: { _controller: AcardBackendBundle:City:create }
+acard_backend_city_index:
+    pattern:  /city
+    defaults: { _controller: AcardBackendBundle:City:list }
+acard_backend_city_edit:
+    pattern:  /city/{id}
+    defaults: { _controller: AcardBackendBundle:City:edit }
+acard_backend_city_delete:
+    pattern:  /city/delete/{id}
+    defaults: { _controller: AcardBackendBundle:City:delete }
+acard_backend_city_info_template:
+    pattern:  /city/info/
+    defaults: { _controller: AcardBackendBundle:City:info }
+acard_backend_city_info:
+    pattern:  /city/info/{id}
+    defaults: { _controller: AcardBackendBundle:City:info }

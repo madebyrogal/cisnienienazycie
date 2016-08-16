@@ -1,0 +1,55 @@
+{{ form_start(form) }}
+<table>
+    <tr>
+        <td width="200" class="label">{{ form_label(form.name) }}</td>
+        <td>
+            {{ form_widget(form.name) }}
+            {% if form.name.vars.errors|length %}
+                <br>{{ form_errors(form.name) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.drName) }}</td>
+        <td>
+            {{ form_widget(form.drName) }}
+            {% if form.drName.vars.errors|length %}
+                <br>{{ form_errors(form.drName) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.address) }}</td>
+        <td>
+            {{ form_widget(form.address) }}
+            {% if form.address.vars.errors|length %}
+                <br>{{ form_errors(form.address) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.postcode) }}</td>
+        <td>
+            {{ form_widget(form.postcode) }}
+            {% if form.postcode.vars.errors|length %}
+                <br>{{ form_errors(form.postcode) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.city) }}</td>
+        <td>
+            {{ form_widget(form.city) }}
+            {% if form.city.vars.errors|length %}
+                <br>{{ form_errors(form.city) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label"></td>
+        <td>
+            {{ form_widget(form.submit) }}
+        </td>
+    </tr>
+</table>
+{{ form_end(form) }}

@@ -1,0 +1,41 @@
+Acard\FrontendBundle\Entity\News:
+    type: entity
+    table: news
+    repositoryClass: Acard\FrontendBundle\Entity\NewsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        dateFrom:
+            type: date
+            column: date_from
+        file:
+            type: text
+        fileThumb1:
+            type: text
+        fileThumb2:
+            type: text
+        title:
+            type: text
+        sneakPeak:
+            type: text
+            column: sneak_peak
+        body:
+            type: text
+        hidden:
+            type: boolean
+        slug:
+            type: string
+            length: 128
+            gedmo:
+              slug:
+                fields:
+                  - title
+    indexes:
+      search_idx:
+        columns: slug
+            
+    lifecycleCallbacks: {  }

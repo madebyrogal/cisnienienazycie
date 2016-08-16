@@ -1,0 +1,15 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Dodaj nową aktualność{% endblock %}
+
+{% block body %}
+    {{ include('AcardBackendBundle:Surgeries:_form.html.twig') }}
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('surgeries') }}">
+                Powrót
+            </a>
+        </li>
+    </ul>
+{% endblock %}

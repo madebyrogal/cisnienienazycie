@@ -1,0 +1,70 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}AcardBackendBundle:Page:index{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th width="200">Pole formularza</th>
+            <th>Wartość</th>
+        </tr>
+        <tr>
+            <td>Pełna nazwa jednostki samorządu terytorialnego:</td>
+            <td>{{item.name}}</td>
+        </tr>
+        <tr>
+            <td>Ulica:</td>
+            <td>{{item.street}}</td>
+        </tr>
+        <tr>
+            <td>Numer domu:</td>
+            <td>{{item.buildingNr}}</td>
+        </tr>
+        <tr>
+            <td>Numer lokalu:</td>
+            <td>{{item.flatNr}}</td>
+        </tr>
+        <tr>
+            <td>Kod pocztowy:</td>
+            <td>{{item.postCode}}</td>
+        </tr>
+        <tr>
+            <td>Miasto:</td>
+            <td>{{item.city}}</td>
+        </tr>
+        <tr>
+            <td>Imię osoby zgłaszającej:</td>
+            <td>{{item.firstName}}</td>
+        </tr>
+        <tr>
+            <td>Nazwisko osoby zgłaszającej:</td>
+            <td>{{item.lastName}}</td>
+        </tr>
+        <tr>
+            <td>Adres e-mail:</td>
+            <td>{{item.email}}</td>
+        </tr>
+        <tr>
+            <td>Numer telefonu:</td>
+            <td>{{item.phone}}</td>
+        </tr>
+        <tr>
+            <td>Czas trwania programu i jego edycje (Czy program był jednorazowy? Czy realizowany w poszczególnych latach?):</td>
+            <td>{{item.descTime}}</td>
+        </tr>
+        <tr>
+            <td>Cele, idea, działania, sposób realizacji (np. akcja informacyjna, plakaty, ulotki itp.):</td>
+            <td>{{item.descAim}}</td>
+        </tr>
+        <tr>
+            <td>Jaki % mieszkańców został objęty programem?</td>
+            <td>{{item.descPeople}}</td>
+        </tr>
+        <tr>
+            <td>Osiągnięte efekty np. liczba przebadanych osób, liczba osób skierowanych na dodatkowe konsultacje:</td>
+            <td>{{item.descEfect}}</td>
+        </tr>
+    </table>
+    <br class="clear">
+    <a href="{{ path('acard_backend_competition_index') }}">Powrót</a>
+{% endblock %}

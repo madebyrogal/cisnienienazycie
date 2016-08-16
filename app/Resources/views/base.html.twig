@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js "> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block title %}Ciśnienie na życie{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+    <link rel="stylesheet" href="{{ asset('bundles/acardfrontend/css/main.css') }}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        mapDataUrl = '{{ path('acard_frontend_map_script_data') }}';
+    </script>
+    <!-- Flexislider  -->
+    <link rel="stylesheet" href="{{ asset('bundles/acardfrontend/js/flexslider/flexslider.css') }}" type="text/css">
+    <script src="{{ asset('bundles/acardfrontend/js/flexslider/jquery.flexslider.js') }}"></script>
+    <!-- Flexislider END  -->
+    
+</head>
+<body class="{% block body_css_class %}{% endblock %}">
+    {{ include('AcardFrontendBundle:_Partials:header.html.twig', {}) }}
+    {% block body %}{% endblock %}
+    {{ include('AcardFrontendBundle:_Partials:footer.html.twig', {}) }}
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="{{ asset('bundles/acardfrontend/js/vendor/infoBubble.js') }}"></script>
+    <script src="{{ asset('bundles/acardfrontend/js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/acardfrontend/js/vendor/jquery.mCustomScrollbar.min.js') }}"></script>
+    <script src="{{ asset('bundles/acardfrontend/js/vendor/jquery.nyroModal.custom.min.js') }}"></script>
+    <script src="{{ asset('bundles/acardfrontend/js/main.js') }}"></script>
+    {#<script src="{{ asset('bundles/acardfrontend/js/main.min.js') }}"></script>#}
+    <!--[if lte IE 8]>
+    <script src="{{ asset('bundles/acardfrontend/js/vendor/html5shiv.js') }}"></script>
+    <script src="{{ asset('bundles/acardfrontend/js/vendor/selectivizr-min.js') }}"></script>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+    <![endif]-->
+    <script id='__ncnst' data-uid='dfc1598bf02f6c1e0c3da8897a2949dfdac3eb0e' src="{{ asset('bundles/acardfrontend/js/vendor/cna.js') }}"></script>
+    {% block javascripts %}{% endblock %}
+</body>
+</html>

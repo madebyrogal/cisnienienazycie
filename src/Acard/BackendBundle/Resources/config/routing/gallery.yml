@@ -1,0 +1,12 @@
+acard_backend_gallery_create:
+    pattern:  /gallery/create
+    defaults: { _controller: AcardBackendBundle:Gallery:create }
+acard_backend_gallery_index:
+    pattern:  /gallery
+    defaults: { _controller: AcardBackendBundle:Gallery:list }
+acard_backend_gallery_edit:
+    pattern:  /gallery/{id}
+    defaults: { _controller: AcardBackendBundle:Gallery:edit }
+acard_backend_gallery_delete:
+    pattern:  /gallery/delete/{id}
+    defaults: { _controller: AcardBackendBundle:Gallery:delete }

@@ -1,0 +1,11 @@
+acard_backend_gallery_news_index:
+    pattern: /gallery_news/{newsId}
+    defaults: { _controller: AcardBackendBundle:GalleryNews:index }
+
+acard_backend_gallery_news_create:
+    pattern: /gallery_news/{newsId}/create
+    defaults: { _controller: AcardBackendBundle:GalleryNews:create }
+
+acard_backend_gallery_news_delete:
+    pattern: /gallery_news/{id}/delete
+    defaults: { _controller: AcardBackendBundle:GalleryNews:delete }

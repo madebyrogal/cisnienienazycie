@@ -1,0 +1,33 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Dodaj nowe miasto{% endblock %}
+
+{% block body %}
+    {{ include('AcardBackendBundle:City:_form.html.twig') }}
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+
+        lat = '{{ form.vars.data.lat }}' || 52.2333;
+        lng = '{{ form.vars.data.lng }}' || 21.0167;
+        mapSelector = 'map';
+        locationsWrapperSelector = '#locationsWrapper';
+        findLocationButtonSelector = '#city_find_location';
+        submitButtonSelector = '#city_submit';
+        formLatSelector = '#city_lat';
+        formLngSelector = '#city_lng';
+        markers = [];
+
+        function getLocationQueryString() {
+            var returnString = '';
+            if($('#city_label').val()) {
+                returnString += $('#city_label').val() + ', ';
+            }
+            return returnString + $('form').first().find('#city_province option:selected').text()
+        }
+    </script>
+    <script src="{{ asset('bundles/acardbackend/js/map_picker.js') }}"></script>
+{% endblock %}

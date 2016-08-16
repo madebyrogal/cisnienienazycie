@@ -1,0 +1,23 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}AcardBackendBundle:Page:index{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Akcja</th>
+        </tr>
+        {% for city in cities %}
+            <tr>
+                <td>{{ city.label }} ({{ city.province.label }})</td>
+                <td>
+                    <a href="{{ path('acard_backend_city_edit', {'id': city.id}) }}">Edytuj</a>
+                    <a href="{{ path('acard_backend_city_delete', {'id': city.id}) }}" onclick="return confirm('Na pewno?')">Usuń</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br class="clear">
+    <a href="{{ url('acard_backend_city_create') }}" class="create-new">Dodaj nowe</a>
+{% endblock %}

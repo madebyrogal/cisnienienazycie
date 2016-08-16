@@ -1,0 +1,12 @@
+Acard\FrontendBundle\Entity\CustomField:
+    type: entity
+    table: custom_fields
+    id:
+        id:
+            type: integer
+            generator: { strategy: auto }
+    fields:
+        name:  { type: string(40), nullable: false }
+        label: { type: string(40), nullable: false }
+        value: { type: string(40), nullable: false }
+        is_protected: { type: boolean, nullable: false }

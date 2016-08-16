@@ -1,0 +1,13 @@
+stfalcon_tinymce:
+    include_jquery: true
+    tinymce_jquery: true
+    theme:
+        # Simple theme: same as default theme
+        simple: ~
+        # Advanced theme with almost all enabled plugins
+        advanced:
+             plugins:
+                 - "advlist autolink lists link image charmap print preview hr anchor pagebreak"
+                 - "searchreplace wordcount visualblocks visualchars code fullscreen"
+                 - "insertdatetime media nonbreaking save table contextmenu directionality"
+                 - "emoticons template paste textcolor"

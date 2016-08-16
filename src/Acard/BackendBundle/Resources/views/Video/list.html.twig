@@ -1,0 +1,24 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Video - lista linków{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>URL</th>
+            <th>Akcje</th>
+        </tr>
+        {% for video in videos %}
+            <tr>
+                <td>{{ video.label }}</td>
+                <td><a href="{{ video.url }}" target="_blank">{{ video.url }}</a></td>
+                <td>
+                    <a href="{{ path('acard_backend_video_delete', {'id': video.id}) }}">Usuń</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br class="clear">
+    <a href="{{ path('acard_backend_video_create') }}" class="create-new">Dodaj nowy</a>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Acard Backend - lista elementów galerii{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Podgląd</th>
+            <th>Akcja</th>
+        </tr>
+        {% for galleryElement in galleryElements %}
+            <tr>
+                <td>
+                    <img src="{{ asset('uploads/' ~ galleryElement.thumbnailFile) }}" style="width:150px;height:100px;"><br>
+                    {{ galleryElement.label }}
+                </td>
+                <td>
+                    <a href="{{ path('acard_backend_gallery_delete', {'id': galleryElement.id}) }}" onclick="return confirm('Na pewno?')">Usuń</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br class="clear">
+    <a href="{{ path('acard_backend_gallery_create') }}" class="create-new">Dodaj nowy</a>
+{% endblock %}

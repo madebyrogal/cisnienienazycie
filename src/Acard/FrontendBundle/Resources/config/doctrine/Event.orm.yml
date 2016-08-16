@@ -1,0 +1,21 @@
+Acard\FrontendBundle\Entity\Event:
+    type: entity
+    table: events
+    id:
+        id:
+            type: integer
+            generator: { strategy: auto }
+    fields:
+        place: { type: string(255), nullable: false }
+        address: { type: string(255), nullable: true }
+        start_date: { type: date, nullable: false }
+        end_date: { type: date, nullable: false }
+        time_details: { type: string(255), nullable: false }
+        lat: { type: float, nullable: false }
+        lng: { type: float, nullable: false }
+        info: { type: text, nullable: true }
+
+    manyToOne:
+        city:
+            targetEntity: Acard\FrontendBundle\Entity\City
+            reversedBy: events

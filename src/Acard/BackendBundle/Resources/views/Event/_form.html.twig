@@ -1,0 +1,99 @@
+{{ form_start(form) }}
+<table>
+
+    <tr>
+        <td class="label">{{ form_label(form.city) }}</td>
+        <td>
+            {{ form_widget(form.city) }} <a href="{{ path('acard_backend_city_create') }}">Dodaj nowe miasto</a>
+            {% if form.city.vars.errors|length %}
+                <br>{{ form_errors(form.city) }}
+            {% endif %}
+        </td>
+    </tr>
+
+    <tr>
+        <td class="label">{{ form_label(form.place) }}</td>
+        <td>
+            {{ form_widget(form.place) }}
+            {% if form.place.vars.errors|length %}
+                <br>{{ form_errors(form.place) }}
+            {% endif %}
+        </td>
+    </tr>
+
+    <tr>
+        <td class="label">{{ form_label(form.start_date) }}</td>
+        <td>
+            {{ form_widget(form.start_date) }}
+            {% if form.start_date.vars.errors|length %}
+                <br>{{ form_errors(form.start_date) }}
+            {% endif %}
+        </td>
+    </tr>
+
+    <tr>
+        <td class="label">{{ form_label(form.end_date) }}</td>
+        <td>
+            {{ form_widget(form.end_date) }}
+            {% if form.end_date.vars.errors|length %}
+                <br>{{ form_errors(form.end_date) }}
+            {% endif %}
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="label">{{ form_label(form.address) }}</td>
+        <td>
+            {{ form_widget(form.address) }}
+            {% if form.address.vars.errors|length %}
+                <br>{{ form_errors(form.address) }}
+            {% endif %}
+        </td>
+    </tr>
+
+    <tr>
+        <td class="label">{{ form_label(form.time_details) }}</td>
+        <td>
+            {{ form_widget(form.time_details) }}
+            {% if form.time_details.vars.errors|length %}
+                <br>{{ form_errors(form.time_details) }}
+            {% endif %}
+        </td>
+    </tr>
+
+    <tr>
+        <td class="label">{{ form_label(form.info) }}</td>
+        <td>
+            {{ form_widget(form.info) }}
+            {% if form.info.vars.errors|length %}
+                <br>{{ form_errors(form.info) }}
+            {% endif %}
+        </td>
+    </tr>
+
+    {{ form_widget(form.lat) }}
+    {{ form_widget(form.lng) }}
+
+    <tr>
+        <td colspan="2">
+            {% if (form.vars.data.lat and form.vars.data.lng) %}
+                {{ form_widget(form.submit) }}
+            {% else %}
+                {{ form_widget(form.submit, {'attr': {'disabled': 'disabled'} }) }}
+            {% endif %}
+            {{ form_widget(form.find_location) }}
+        </td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td id="locationsWrapper" colspan="2"></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td id="map" colspan="2" style="width:800px;height:600px;"></td>
+        <td></td>
+    </tr>
+</table>
+{{ form_end(form) }}

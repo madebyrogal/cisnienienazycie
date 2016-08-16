@@ -1,0 +1,11 @@
+Acard\FrontendBundle\Entity\PageTemplate:
+    type: entity
+    table: page_templates
+    id:
+        id:
+            type: integer
+            generator: { strategy: auto }
+    fields:
+        name:     { type: string(40) }
+        label:    { type: string(40) }
+

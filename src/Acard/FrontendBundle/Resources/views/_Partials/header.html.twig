@@ -1,0 +1,58 @@
+<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNG74X" 
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NNG74X');</script>
+<!-- End Google Tag Manager -->
+<header class="m-header">
+    <div class="wrapper">
+        <div class="brand col-sm-3">
+            <a href="{{ url('acard_frontend_homepage') }}">
+                <img src="{{ asset('bundles/acardfrontend/img/logo.png') }}" alt="Ciśnienie na życie">
+            </a>
+        </div>
+        <nav id="main-nav" class="pull-right">
+            <ul>
+                <li>
+                    {% set cssClass = (page.name == 'aktualnosci') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_news_index') }}">Aktualności</a>
+                </li>
+                <li>
+                    {% set cssClass = (page.name == 'about') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'o-kampanii'}) }}">O kampanii</a>
+                </li>
+                <li>
+                    {% set cssClass = (page.name == 'calendar') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'kalendarium'}) }}">Kalendarium badań</a>
+                </li>
+                <li>
+                    {% set cssClass = (page.name == 'heart-age') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'wiek-serca'}) }}">Wiek serca</a>
+                </li>
+                <li>
+                    {% set cssClass = (page.name == 'hypertension') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'nadcisnienie'}) }}">O nadciśnieniu</a>
+                </li>
+                <li>
+                    {% set cssClass = (page.name == 'acard') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'acard'}) }}">Acard</a>
+                </li>
+                <!-- <li>
+                    {% set cssClass = (page.name == 'samorzad-od-serca') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'samorzad-od-serca'}) }}">Samorząd od serca</a>
+                </li> -->
+                <li>
+                    {% set cssClass = (page.name == 'konkurs') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'konkurs'}) }}">Konkurs</a>
+                </li>
+                <li>
+                    {% set cssClass = (page.name == 'formularz-konkursowy') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'formularz-konkursowy'}) }}">Samorząd od serca</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

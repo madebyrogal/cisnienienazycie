@@ -1,0 +1,24 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}AcardBackendBundle:Page:index{% endblock %}
+
+{% block body %}
+    <h4>Galeria aktualności: {{news.title}}</h4> 
+    <table>
+        <tr>
+            <th>Zdjęcie</th>
+            <th>Alternatywny tekst</th>
+        </tr>
+        {% for gal in gallery %}
+            <tr>
+                <td><img src="/uploads/gallery/{{ gal.fileThumb }}" alt="miniatura" width="100"/></td>
+                <td>{{ gal.alt }}</td>
+                <td>
+                    <a href="{{ path('acard_backend_gallery_news_delete', {'id': gal.id}) }}" onclick="return confirm('Na pewno?')">Usuń</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br class="clear">
+    <a href="{{ url('acard_backend_gallery_news_create', {'newsId': newsId}) }}" class="create-new">Dodaj nowe</a>
+{% endblock %}

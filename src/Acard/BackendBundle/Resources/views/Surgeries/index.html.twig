@@ -1,0 +1,80 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}AcardBackendBundle:Page:index{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Doktor</th>
+            <th>Miasto</th>
+            <th>Adres</th>
+            <th>Kod</th>
+            <th>Akcja</th>
+        </tr>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.drName }}</td>
+                <td>{{ entity.city }}</td>
+                <td>{{ entity.address }}</td>
+                <td>{{ entity.postcode }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('surgeries_edit', { 'id': entity.id }) }}">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('surgeries_delete', { 'id': entity.id }) }}" onclick="return confirm('Na pewno?')">Usuń</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br class="clear">
+    <a href="{{ path('surgeries_new') }}" class="create-new">Dodaj nowy</a>
+
+
+    <!--<table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Drname</th>
+                <th>Address</th>
+                <th>Postcode</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td><a href="{{ path('surgeries_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                    <td>{{ entity.name }}</td>
+                    <td>{{ entity.drName }}</td>
+                    <td>{{ entity.address }}</td>
+                    <td>{{ entity.postcode }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('surgeries_show', { 'id': entity.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('surgeries_edit', { 'id': entity.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('surgeries_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>-->
+{% endblock %}

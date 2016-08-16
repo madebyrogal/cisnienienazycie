@@ -1,0 +1,37 @@
+acard_frontend_map_script_data:
+    pattern: /calendar-component-data
+    defaults: { _controller: AcardFrontendBundle:Event:map }
+
+acard_frontend_homepage:
+    pattern: /
+    defaults: { _controller: AcardFrontendBundle:Page:view, pageUrl: index }
+
+acard_frontend_find_by_province:
+    pattern: /miasto/znajdzWgWojewodztwa
+    defaults: { _controller: AcardFrontendBundle:City:findByProvince }
+
+acard_frontend_page_view:
+    pattern: /{pageUrl}.html
+    defaults: { _controller: AcardFrontendBundle:Page:view }
+
+acard_frontend_konkurs_index:
+    pattern: /konkurs/formularz.html
+    defaults: { _controller: AcardFrontendBundle:Competition:index }
+
+acard_frontend_konkurs_send_form:
+    pattern: /konkurs/formularz-podziekowanie.html
+    defaults: { _controller: AcardFrontendBundle:Competition:sendForm }
+
+acard_frontend_news_index:
+    pattern: /aktualnosci/lista.html
+    defaults: { _controller: AcardFrontendBundle:News:index }
+acard_frontend_news_show:
+    pattern: /aktualnosci/{id}/{slug}.html
+    defaults: { _controller: AcardFrontendBundle:News:show }
+
+acard_frontend_surgeries:
+    pattern: /gabinety/szukaj.html
+    defaults: { _controller: AcardFrontendBundle:Surgeries:search }
+acard_frontend_surgeries_show:
+    pattern: /gabinety/{city_id}/{city}.html
+    defaults: { _controller: AcardFrontendBundle:Surgeries:show }

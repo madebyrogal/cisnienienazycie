@@ -1,0 +1,25 @@
+<section class="m-kv kv-small clearfix">
+    <div class="wrapper dt">
+
+        <div class="col-sm-6 pull-left m-kv-intro">
+            <p>
+                <b>Twoja mama kocha<br>
+                    Cię całym sercem?</b> Upewnij się, <br>że
+                jest ono w dobrej kondycji.
+            </p>
+        </div>
+
+        <div class="pull-right text-right m-kv-counter">
+            <div>
+                {% for digit in examination_count|split('') %}
+                    <span class="counter counter_{{ digit }}">{{ digit }}</span>
+                {% endfor %}
+                <br style="clear:both">
+            </div>
+            <div class="m-kv-counter-intro">
+                Przebadanych serc
+            </div>
+
+        </div>
+    </div>
+</section>

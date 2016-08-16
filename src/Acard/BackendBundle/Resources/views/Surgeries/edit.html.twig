@@ -1,0 +1,67 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block body -%}
+    {{ form_start(edit_form) }}
+    <table>
+        <tr>
+            <td width="200" class="label">{{ form_label(edit_form.name) }}</td>
+            <td>
+                {{ form_widget(edit_form.name) }}
+                {% if edit_form.name.vars.errors|length %}
+                    <br>{{ form_errors(edit_form.name) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">{{ form_label(edit_form.drName) }}</td>
+            <td>
+                {{ form_widget(edit_form.drName) }}
+                {% if edit_form.drName.vars.errors|length %}
+                    <br>{{ form_errors(edit_form.drName) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">{{ form_label(edit_form.address) }}</td>
+            <td>
+                {{ form_widget(edit_form.address) }}
+                {% if edit_form.address.vars.errors|length %}
+                    <br>{{ form_errors(edit_form.address) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">{{ form_label(edit_form.postcode) }}</td>
+            <td>
+                {{ form_widget(edit_form.postcode) }}
+                {% if edit_form.postcode.vars.errors|length %}
+                    <br>{{ form_errors(edit_form.postcode) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">{{ form_label(edit_form.city) }}</td>
+            <td>
+                {{ form_widget(edit_form.city) }}
+                {% if edit_form.city.vars.errors|length %}
+                    <br>{{ form_errors(edit_form.city) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label"></td>
+            <td>
+                {{ form_widget(edit_form.submit) }}
+            </td>
+        </tr>
+    </table>
+    {{ form_end(edit_form) }}
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('surgeries') }}">
+                Powrót
+            </a>
+        </li>
+    </ul>
+{% endblock %}

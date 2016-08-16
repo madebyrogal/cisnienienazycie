@@ -1,0 +1,22 @@
+<section class="m-wideinfo-bg gallery-bg">
+    <div class="wrapper">
+
+        <div class="m-photogallery">
+            <header>
+                <h2>Fotogaleria</h2> ({{ galleryElements|length }} zdjęć)
+            </header>
+
+            <div class="m-photogallery-slides">
+				
+				<div class="m-photogallery-slides">
+                    {% for galleryElement in galleryElements %}
+                        <a href="{{ asset('uploads/' ~ galleryElement.file) }}" rel="gal" class="nyroModal" title="{{ galleryElement.label }}">
+                            <img src="{{ asset('uploads/' ~ galleryElement.thumbnailFile) }}">
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="scroller"></div>
+        </div>
+    </div>
+</section>

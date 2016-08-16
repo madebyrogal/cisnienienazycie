@@ -1,0 +1,118 @@
+{% extends "AcardFrontendBundle::page_layout.html.twig" %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% if page.urlTitle != 'kontakt' %}
+        <script src="{{ asset('bundles/acardfrontend/js/box_scroll.js') }}"></script>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    {{ include('AcardFrontendBundle:_Partials:stats_small.html.twig', {}) }}
+    <section class="page-content">
+        <div class="wrapper">
+            <div class="col-sm-8 page-content-article">
+                {% block content %}
+                    <div class="col-sm-8 page-content-article {{ page.wrapperCssClass }}">
+                        {{ page.text|raw }}
+                        {{ form_start(form) }}
+                        <div class="form">
+                            {{ form_errors(form) }}
+                            <div>
+                                {{ form_label(form.name) }}<br/>
+                                {{ form_errors(form.name) }}
+                                {{ form_widget(form.name, {'attr': {'placeholder': 'Wpisz nazwę jednostki'}} ) }}
+                            </div>
+
+                            <div>
+                                {{ form_label(form.street) }}<span class='required-star'>*</span><br/>
+                                {{ form_errors(form.street) }}
+                                {{ form_errors(form.buildingNr) }}
+                                {{ form_errors(form.flatNr) }}
+                                {{ form_widget(form.street, {'attr': {'placeholder': 'Wpisz ulicę i numer'}} ) }}
+                                {{ form_widget(form.buildingNr, {'attr': {'placeholder': 'Nr domu'}} ) }}
+                                {{ form_widget(form.flatNr, {'attr': {'placeholder': 'Nr lokalu'}} ) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.postCode) }}<span class='required-star'>*</span><br/>
+                                {{ form_errors(form.postCode) }}
+                                {{ form_errors(form.city) }}
+                                {{ form_widget(form.postCode) }}
+                                <input type="text" id="post1" name="post[]" class="postCode" required="required" maxlength="1"/>
+                                <input type="text" id="post2" name="post[]" class="postCode" required="required" maxlength="1"/> &mdash; 
+                                <input type="text" id="post3" name="post[]" class="postCode" required="required" maxlength="1"/>
+                                <input type="text" id="post4" name="post[]" class="postCode" required="required" maxlength="1"/>
+                                <input type="text" id="post5" name="post[]" class="postCode" required="required" maxlength="1"/>
+                                {{ form_widget(form.city, {'attr': {'placeholder': 'Wpisz miasto'}} ) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.firstName) }}<span class='required-star'>*</span><br/>
+                                {{ form_errors(form.firstName) }}
+                                {{ form_widget(form.firstName, {'attr': {'placeholder': 'Wpisz imię'}} ) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.lastName) }}<span class='required-star'>*</span><br/>
+                                {{ form_errors(form.lastName) }}
+                                {{ form_widget(form.lastName, {'attr': {'placeholder': 'Wpisz nazwisko'}} ) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.email) }}<span class='required-star'>*</span><br/>
+                                {{ form_errors(form.email) }}
+                                {{ form_widget(form.email, {'attr': {'placeholder': 'Wpisz adres e-mail'}} ) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.phone) }}<span class='required-star'>*</span><br/>
+                                {{ form_errors(form.phone) }}
+                                {{ form_widget(form.phone, {'attr': {'placeholder': 'Wpisz numer telefonu'}} ) }}
+                            </div>
+                        </div>
+                        <div class="descGroup">Opis programu</div>
+                        <div class="form form2">
+                            <div>
+                                <label for="acard_frontendbundle_competitionform_descTime" class="descSection">Czas trwania programu i jego edycje (Czy program był jednorazowy?<br>Czy realizowany w poszczególnych latach?):<span class='required-star'>*</span></label><br/>
+                                    {{ form_errors(form.descTime) }}
+                                    {{ form_widget(form.descTime) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.descAim) }}<span class='required-star'>*</span><br/>
+                                {{ form_errors(form.descAim) }}
+                                {{ form_widget(form.descAim) }}
+                            </div>
+                            <div>
+                                {{ form_label(form.descPeople) }}<span class='required-star'>*</span><br/>
+                                {{ form_errors(form.descPeople) }}
+                                {{ form_widget(form.descPeople) }}
+                            </div>
+                            <div>
+                                <label class="required" for="acard_frontendbundle_competitionform_descEfect">Osiągnięte efekty np. liczba przebadanych osób, liczba osób skierowanych na dodatkowe konsultacje:<span class='required-star'>*</span></label><br/>
+                                {{ form_errors(form.descEfect) }}
+                                {{ form_widget(form.descEfect) }}
+                            </div>
+                            <div>
+                                {{ form_errors(form.accept1) }}
+                                {{ form_widget(form.accept1) }}
+                                <span id="acceptLabel">
+                                    {{ form_label(form.accept1) }}<br/><br/>
+                                    <span class="required-star">* Pola obowiązkowe</span>
+                                </span>
+                            </div>
+                            <div>
+                                <input type="submit" value="Wyślij" />
+                                <a id="btn_regulation" href="/bundles/acardfrontend/files/Regulamin_konkursu_samorzad_od_serca.pdf" title="Regulamin">Regulamin</a>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                {% endblock %}
+
+            </div>
+            {{ include('AcardFrontendBundle:_Partials:calendarium.html.twig', {}) }}
+        </div>
+    </section>
+    {{ include('AcardFrontendBundle:_Partials:modal_video.html.twig', {}) }}
+
+    {{ include('AcardFrontendBundle:_Partials:teasers.html.twig', {}) }}
+
+    {{ include('AcardFrontendBundle:_Partials:gallery_static.html.twig', {}) }}
+
+{% endblock %}

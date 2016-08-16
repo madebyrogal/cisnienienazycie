@@ -1,0 +1,62 @@
+Acard\FrontendBundle\Entity\CompetitionForm:
+    type: entity
+    table: competition_form
+    repositoryClass: Acard\FrontendBundle\Entity\CompetitionFormRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '255'
+        street:
+            type: string
+            length: '255'
+        buildingNr:
+            type: string
+            length: '16'
+            column: building_nr
+        flatNr:
+            type: string
+            length: '16'
+            column: flat_nr
+        postCode:
+            type: string
+            length: '8'
+            column: post_code
+        city:
+            type: string
+            length: 255
+        firstName:
+            type: string
+            length: '255'
+            column: first_name
+        lastName:
+            type: string
+            length: '255'
+            column: last_name
+        email:
+            type: string
+            length: '255'
+        phone:
+            type: string
+            length: '16'
+        descTime:
+            type: text
+            column: desc_time
+        descAim:
+            type: text
+            column: desc_aim
+        descPeople:
+            type: text
+            column: desc_people
+        descEfect:
+            type: text
+            column: desc_efect
+        accept1:
+            type: boolean
+            column: accept_1
+    lifecycleCallbacks: {  }

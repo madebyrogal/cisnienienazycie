@@ -1,0 +1,33 @@
+Acard\FrontendBundle\Entity\Surgeries:
+    type: entity
+    table: surgeries
+    repositoryClass: Acard\FrontendBundle\Entity\SurgeriesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        drName:
+            type: string
+            length: 255
+            column: dr_name
+        address:
+            type: string
+            length: 255
+        postcode:
+            type: string
+            length: '16'
+    lifecycleCallbacks: {  }
+    
+    manyToOne:
+        city:
+            targetEntity: City
+            inversedBy: surgeries
+            joinColumn:
+                name: city_id
+                referencedColumnName: id

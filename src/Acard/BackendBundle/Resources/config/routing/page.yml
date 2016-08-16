@@ -1,0 +1,12 @@
+acard_backend_page_index:
+    pattern:  /page
+    defaults: { _controller: AcardBackendBundle:Page:list }
+acard_backend_page_edit:
+    pattern:  /page/{id}
+    defaults: { _controller: AcardBackendBundle:Page:edit }
+acard_backend_page_create:
+    pattern:  /page/create
+    defaults: { _controller: AcardBackendBundle:Page:create }
+acard_backend_page_delete:
+    pattern:  /page/delete/{id}
+    defaults: { _controller: AcardBackendBundle:Page:delete }

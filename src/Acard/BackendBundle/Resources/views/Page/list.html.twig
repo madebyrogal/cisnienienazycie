@@ -1,0 +1,18 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}AcardBackendBundle:Page:index{% endblock %}
+
+{% block body %}
+<table>
+    <tr>
+        <th>Nazwa</th>
+        <th>Akcja</th>
+    </tr>
+    {% for page in pages %}
+        <tr>
+            <td>{{ page.metaTitle }}</td>
+            <td><a href="{{ path('acard_backend_page_edit', {'id': page.id}) }}">Edytuj</a></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

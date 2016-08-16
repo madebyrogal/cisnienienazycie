@@ -1,0 +1,13 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Dodaj nowy element galerii{% endblock %}
+
+{% block body %}
+    {{ tinymce_init() }}
+    {{ include('AcardBackendBundle:GalleryNews:_form.html.twig') }}
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

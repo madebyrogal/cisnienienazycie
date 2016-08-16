@@ -1,0 +1,20 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Acard - Lista wydarzeń{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Wartość</th>
+            <th>Akcja</th>
+        </tr>
+        {% for customField in customFields %}
+            <tr>
+                <td>{{ customField.label }}</td>
+                <td>{{ customField.value }}</td>
+                <td><a href="{{ path('acard_backend_custom_field_edit', {'id': customField.id}) }}">Edytuj</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

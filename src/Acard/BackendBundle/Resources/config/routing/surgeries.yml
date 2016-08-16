@@ -1,0 +1,29 @@
+surgeries:
+    pattern:  /surgeries
+    defaults: { _controller: "AcardBackendBundle:Surgeries:index" }
+
+surgeries_show:
+    pattern:  /surgeries/{id}/show
+    defaults: { _controller: "AcardBackendBundle:Surgeries:show" }
+
+surgeries_new:
+    pattern:  /surgeries/new
+    defaults: { _controller: "AcardBackendBundle:Surgeries:new" }
+
+surgeries_create:
+    pattern:  /surgeries/create
+    defaults: { _controller: "AcardBackendBundle:Surgeries:create" }
+    requirements: { _method: post }
+
+surgeries_edit:
+    pattern:  /surgeries/{id}/edit
+    defaults: { _controller: "AcardBackendBundle:Surgeries:edit" }
+
+surgeries_update:
+    pattern:  /surgeries/{id}/update
+    defaults: { _controller: "AcardBackendBundle:Surgeries:update" }
+    requirements: { _method: post|put }
+
+surgeries_delete:
+    pattern:  /surgeries/{id}/delete
+    defaults: { _controller: "AcardBackendBundle:Surgeries:delete" }

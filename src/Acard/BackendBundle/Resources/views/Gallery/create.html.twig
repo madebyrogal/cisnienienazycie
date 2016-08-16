@@ -1,0 +1,33 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Acard - dodawanie elementu galerii{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <table>
+        <tr>
+            <td class="label">{{ form_label(form.file) }}</td>
+            <td>
+                {{ form_widget(form.file) }}
+                {% if form.file.vars.errors|length %}
+                    <br>{{ form_errors(form.file) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">{{ form_label(form.label) }}</td>
+            <td>
+                {{ form_widget(form.label) }}
+                {% if form.label.vars.errors|length %}
+                    <br>{{ form_errors(form.label) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">{{ form_widget(form.submit) }}</td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}AcardBackendBundle:Page:index{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Nazwa jed. sam.</th>
+            <th>Imię nazwisko</th>
+            <th>Miasto</th>
+            <th>E-mail</th>
+            <th>Phone</th>
+            <th>Akcja</th>
+        </tr>
+        {% for item in list %}
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{item.firstName}} {{item.lastName}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>
+                    <a href="{{ path('acard_backend_competition_show', {'id': item.id}) }}">Pokaż</a>
+                    <a href="{{ path('acard_backend_competition_delete', {'id': item.id}) }}" onclick="return confirm('Na pewno?')">Usuń</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br class="clear">
+{% endblock %}

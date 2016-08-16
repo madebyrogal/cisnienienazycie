@@ -1,0 +1,21 @@
+Acard\FrontendBundle\Entity\GalleryNews:
+    type: entity
+    table: gallery_news
+    repositoryClass: Acard\FrontendBundle\Entity\GalleryNewsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        file:
+            type: text
+        fileThumb:
+            type: text
+        alt:
+            type: string
+            length: 255
+            nullable: true
+        newsId:
+            type: integer

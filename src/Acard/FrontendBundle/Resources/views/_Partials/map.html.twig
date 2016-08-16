@@ -1,0 +1,48 @@
+<section class="m-map-container">
+    <div id="map"></div>
+    <div class="wrapper mapwrapper">
+        <div class="m-check-events">
+            <div class="m-check-events-header">
+                Sprawdź kalendarium<br>
+                badań w Twoim regionie
+            </div>
+            <div class="m-check-events-elem">
+                <b><span class="violet">Bezpłatne pomiary ciśnienia krwi.</span><br>
+                    Sprawdź na mapie, gdzie w najbliższym czasie zawita akcja "Ciśnienie na życie".</b>
+ 
+
+                <div class="formbox dropdown-holder">
+                    <div class="selectBox">
+                        <input name="" value="" type="hidden">
+                        <span class="selected" data-placeholder='Województwo'></span>
+                        <span class="selectArrow"></span>
+
+                        <div class="selectOptionsWrapper">
+                            <div class="selectOptions" id='provinces'>
+                                {% for province in provinces %}
+                                    <span data-value="{{ province.name }}"
+                                          class="selectOption selectOptionProvince">{{ province.label }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selectBox">
+                        <input name="" value="" type="hidden">
+                        <span class="selected" data-placeholder='Miasto' id='cityLabel'></span>
+                        <span class="selectArrow"></span>
+
+                        <div class="selectOptionsWrapper">
+                            <div class="selectOptions" id='cities'>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="light-grey">Aktualnie przeprowadzamy pomiary ciśnienia tętniczego na terenie kraju. Nawyk
+                        regularnej kontroli ciśnienia krwi, to jeden z najlepszych sposobów uniknięcia schorzeń układu
+                        krążenia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

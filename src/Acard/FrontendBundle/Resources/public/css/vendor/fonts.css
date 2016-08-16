@@ -1,0 +1,42 @@
+@font-face {
+	font-family: "GeogrotesqueRegular";
+    src: url("../../fonts/geogtq-rg-webfont.eot?#iefix") format("embedded-opentype"), 
+		 url("../../fonts/geogtq-rg-webfont.woff") format("woff"), 
+		 url("../../fonts/geogtq-rg-webfont.ttf") format("truetype");
+	font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'GeogrotesqueLight';
+    src: url('../../fonts/geogtq-lg_0.eot');
+    src: url('../../fonts/geogtq-lg_0.eot') format('embedded-opentype'),
+         url('../../fonts/geogtq-lg_0.woff') format('woff'),
+         url('../../fonts/geogtq-lg_0.ttf') format('truetype'),
+         url('../../fonts/geogtq-lg_0.svg#GeogrotesqueLight') format('svg');
+}
+
+@font-face {
+    font-family: 'ArvoBold';
+    src: url('../../fonts/arvo-bold_201.eot');
+    src: url('../../fonts/arvo-bold_201.eot') format('embedded-opentype'),
+         url('../../fonts/arvo-bold_201.woff') format('woff'),
+         url('../../fonts/arvo-bold_201.ttf') format('truetype'),
+         url('../../fonts/arvo-bold_201.svg#ArvoBold') format('svg');
+}
+@font-face {
+    font-family: 'Museo500';
+    src: url('../../fonts/museo500-regular.eot');
+    src: url('../../fonts/museo500-regular.eot') format('embedded-opentype'),
+         url('../../fonts/museo500-regular.woff') format('woff'),
+         url('../../fonts/museo500-regular.ttf') format('truetype'),
+         url('../../fonts/museo500-regular.svg#Museo500') format('svg');
+}
+@font-face {
+    font-family: 'Museo700';
+    src: url('../../fonts/museo700-regular.eot');
+    src: url('../../fonts/museo700-regular.eot') format('embedded-opentype'),
+         url('../../fonts/museo700-regular.woff') format('woff'),
+         url('../../fonts/museo700-regular.ttf') format('truetype'),
+         url('../../fonts/museo700-regular.svg#Museo700') format('svg');
+}

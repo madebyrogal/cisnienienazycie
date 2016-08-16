@@ -1,0 +1,74 @@
+{{ form_start(form) }}
+<table>
+    <tr>
+        <td width="200" class="label">{{ form_label(form.file) }}</td>
+        <td>
+            {{ form_widget(form.file) }}
+            {% if form.file.vars.errors|length %}
+                <br>{{ form_errors(form.file) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.dateFrom) }}</td>
+        <td>
+            {{ form_widget(form.dateFrom) }}
+            {% if form.dateFrom.vars.errors|length %}
+                <br>{{ form_errors(form.dateFrom) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.title) }}</td>
+        <td>
+            {{ form_widget(form.title) }}
+            {% if form.title.vars.errors|length %}
+                <br>{{ form_errors(form.title) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.sneakPeak) }}</td>
+        <td>
+            {{ form_widget(form.sneakPeak) }}
+            {% if form.sneakPeak.vars.errors|length %}
+                <br>{{ form_errors(form.sneakPeak) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.body) }}</td>
+        <td>
+            {{ form_widget(form.body) }}
+            {% if form.body.vars.errors|length %}
+                <br>{{ form_errors(form.body) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.hidden) }}</td>
+        <td>
+            {{ form_widget(form.hidden) }}
+            {% if form.hidden.vars.errors|length %}
+                <br>{{ form_errors(form.hidden) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.slug) }}</td>
+        <td>
+            {{ form_widget(form.slug) }}
+            {% if form.slug.vars.errors|length %}
+                <br>{{ form_errors(form.slug) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label"></td>
+        <td>
+            {{ form_widget(form.submit) }}
+        </td>
+    </tr>
+</table>
+
+{{ form_end(form) }}

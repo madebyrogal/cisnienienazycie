@@ -1,0 +1,13 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Edytuj aktualność{% endblock %}
+
+{% block body %}
+    {{ tinymce_init() }}
+    {{ include('AcardBackendBundle:News:_form.html.twig') }}
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

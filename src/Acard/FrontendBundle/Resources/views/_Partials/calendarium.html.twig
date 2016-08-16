@@ -1,0 +1,22 @@
+<aside class="col-sm-4 m-aside">
+    <div class="m-aside-inside">
+        <div class="m-aside--box">
+            <div class="m-box-img-wrapper">
+                <a href="{{ url('acard_frontend_page_view', {'pageUrl': 'kalendarium'}) }}"><img src="{{ asset('bundles/acardfrontend/img/aside-map.jpg') }}" alt="Kalendarium badań" class="m-box-img"></a>
+            </div>
+            <span class="m-box-title violet">Kalendarium badań</span>
+            <p>
+                Sprawdź najbliższe terminy akcji “Ciśnienie na Życie” w Twojej miejscowości!
+            </p>
+            <a href="{{ url('acard_frontend_page_view', {'pageUrl': 'kalendarium'}) }}" class="btn read-more"><span>Czytaj więcej</span></a>
+        </div>
+        
+        <div class="m-aside--box">
+            <div class="m-box-img-wrapper">
+                <img src="{{ asset('bundles/acardfrontend/img/video-thumb.jpg') }}" alt="Video" class="m-box-img"  data-toggle="modal" data-target="#video">
+                <img src="{{ asset('bundles/acardfrontend/img/movie-arrow.png') }}" class="Videoarrow"  data-toggle="modal" data-target="#video">
+            </div>
+            <span class="m-box-title violet">Video</span>
+        </div>
+    </div>
+</aside>

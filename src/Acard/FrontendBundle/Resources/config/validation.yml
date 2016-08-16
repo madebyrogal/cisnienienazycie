@@ -1,0 +1,17 @@
+Acard\BackendBundle\Entity\GalleryElement:
+    properties:
+        file:
+            - File:
+                maxSize: 6000000
+Acard\BackendBundle\Entity\Video:
+    properties:
+        poster:
+            - File:
+                maxSize: 6000000
+Acard\FrontendBundle\Entity\GalleryNews:
+    properties:
+        file:
+            - NotNull:
+                message: "Musisz wybrać plik"
+            - File:
+                maxSize: 6000000

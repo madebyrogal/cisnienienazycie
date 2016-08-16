@@ -1,0 +1,54 @@
+<section class="flexslider">
+    <ul class="slides">
+        <li>
+            <div class="m-kv kv-large clearfix" style="background-image: url( {{asset('bundles/acardfrontend/img/header3.jpg')}} );">
+                <div class="wrapper dt">
+                    <div class="col-sm-6 pull-left m-kv-intro">
+                        <h1 class="claim pull-left">konkurs</h1>
+                        <p>
+                            Chcesz poznać wiek swojego serca i wziąć udział w konkursie? <br>
+                            Odwiedź mobilne centrum badań kampanii „Ciśnienie na Życie”!
+                        </p>
+                        <p><b>Zapoznaj się z zasadami konkursu. <br>Zapraszamy!</b></p>
+                        <a href="{{ url('acard_frontend_page_view', {'pageUrl': 'konkurs'}) }}" class="btn kv-btn"><span>Sprawdź szczegóły</span></a>
+
+                    </div>
+                    {{ include('AcardFrontendBundle:_Partials:counter.html.twig', {}) }}
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="m-kv kv-large clearfix" style="background-image: url( {{asset('bundles/acardfrontend/img/header.jpg')}} );">
+                <div class="wrapper dt">
+                    <div class="col-sm-6 pull-left m-kv-intro">
+                        <h1 class="claim pull-left">kampania<br>ciśnienie na życie</h1>
+                        <p>
+                            W ramach kampanii „Ciśnienie na życie” możesz dokonać bezpłatnego pomiaru ciśnienia krwi.
+                            <b>Terminy akcji w Twojej miejscowości opublikujmy już wkrótce!</b>
+                        </p>
+                        <a href="{{ url('acard_frontend_page_view', {'pageUrl': 'o-kampanii'}) }}" class="btn kv-btn"><span>Więcej o kampanii</span></a>
+                    </div>
+                    {{ include('AcardFrontendBundle:_Partials:counter.html.twig', {}) }}
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="m-kv kv-large clearfix" style="background-image: url( {{asset('bundles/acardfrontend/img/header2.jpg')}} );">
+                <div class="wrapper dt">
+                    <div class="col-sm-6 pull-left m-kv-intro">
+                        <h1 class="claim pull-left">Centra Obniżania Wieku Serca</h1>
+                        <p>
+                            Centra Obniżania Wieku Serca<br/>
+                            Znajdź swój gabinet.
+                        </p>
+                        <p>
+                            <b>Walcz o obniżenie wieku swojego serca!</b>
+                        </p>
+                        {{ include('AcardFrontendBundle:_Partials:form_surgeries_btn.html.twig', {}) }}
+                    </div>
+                    {{ include('AcardFrontendBundle:_Partials:counter.html.twig', {}) }}
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>

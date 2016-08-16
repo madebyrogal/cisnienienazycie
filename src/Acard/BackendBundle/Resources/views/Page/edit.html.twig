@@ -1,0 +1,79 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Acard - Edycja strony{% endblock %}
+
+{% block body %}
+    {{ tinymce_init() }}
+    {{ form_start(form) }}
+    <table>
+        <tr>
+            <td class="label">
+                {{ form_label(form.meta_title) }}
+            </td>
+            <td>
+                {{ form_widget(form.meta_title) }}
+                {% if form.meta_title.vars.errors|length %}
+                    <br>{{ form_errors(form.meta_title) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                {{ form_label(form.meta_description) }}
+            </td>
+            <td>
+                {{ form_widget(form.meta_description) }}
+                {% if form.meta_description.vars.errors|length %}
+                    <br>{{ form_errors(form.meta_description) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                {{ form_label(form.meta_keywords) }}
+            </td>
+            <td>
+                {{ form_widget(form.meta_keywords) }}
+                {% if form.meta_keywords.vars.errors|length %}
+                    <br>{{ form_errors(form.meta_keywords) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                {{ form_label(form.url_title) }}
+            </td>
+            <td>
+                {{ form.vars.value.urlTitle }}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                {{ form_label(form.wrapper_css_class) }}
+            </td>
+            <td>
+                {{ form_widget(form.wrapper_css_class) }}
+                {% if form.wrapper_css_class.vars.errors|length %}
+                    <br>{{ form_errors(form.wrapper_css_class) }}
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                {{ form_label(form.text) }}
+            </td>
+            <td>
+                {{ form_widget(form.text) }}
+                {% if form.text.vars.errors|length %}
+                    <br>{{ form_errors(form.text) }}
+                {% endif %}
+            </td>
+        </tr>
+
+        <tr>
+            <td>{{ form_widget(form.submit) }}</td>
+            <td></td>
+        </tr>
+    </table>
+    {{ form_end(form) }}
+{% endblock %}

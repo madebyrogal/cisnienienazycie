@@ -1,0 +1,12 @@
+acard_backend_video_create:
+    pattern:  /video/create
+    defaults: { _controller: AcardBackendBundle:Video:create }
+acard_backend_video_index:
+    pattern:  /video
+    defaults: { _controller: AcardBackendBundle:Video:list }
+acard_backend_video_edit:
+    pattern:  /video/{id}
+    defaults: { _controller: AcardBackendBundle:Video:edit }
+acard_backend_video_delete:
+    pattern:  /video/delete/{id}
+    defaults: { _controller: AcardBackendBundle:Video:delete }

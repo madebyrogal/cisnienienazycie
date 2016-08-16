@@ -1,0 +1,18 @@
+<section class="m-wideinfo-bg">
+    <div class="wrapper m-teasers-container">
+        <div class="m-teaser-box pull-left">
+            <div class="m-teaser-box-desc">
+                <h2 class="m-teaser-box-title">Kampania ciśnienie na życie</h2>
+                <a href="{{ url('acard_frontend_page_view', {'pageUrl': 'o-kampanii'}) }}"><img src="{{ asset('bundles/acardfrontend/img/box3.jpg') }}" alt="Kampania ciśnienie na życie"></a>
+                <p>
+                    Przeprowadzenie 200 000 pomiarów ciśnienia tętniczego, wsparcie obchodów Światowego Dnia Serca i sporządzenie raportu na temat czynników ryzyka chorób układu krążenia – to tylko niektórez zadań ogólnopolskiej kampanii społecznej "Ciśnienie na życie", organizowanej przez Grupę Polpharma.
+                </p>
+
+                <a href="{{ url('acard_frontend_page_view', {'pageUrl': 'o-kampanii'}) }}" class="btn read-more"><span>Czytaj więcej</span></a>
+            </div>
+        </div>
+        <div class="m-movies-container pull-right">
+            {{ render(controller('AcardFrontendBundle:Video:mainPageVideos')) }}
+        </div>
+    </div>
+</section>

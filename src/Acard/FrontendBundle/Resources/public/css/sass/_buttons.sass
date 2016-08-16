@@ -1,0 +1,57 @@
+%btn
+  +transition(none !important)
+  background-color: rgb(0,142,199)
+  @include filter-gradient(#008ec7, #0076b9, vertical)
+  @include background-image(linear-gradient(top,  rgb(0,142,199) 50%,rgb(0,118,185) 50%))
+  display: block  
+  font-size: 14px
+  font-family: $arial
+  color: $white
+  cursor: pointer
+  text-align: left
+  border: 0
+  padding: 0
+ 
+%opacity-hover
+  +transition(all .25s ease-in-out)
+  &:hover
+    opacity: .9 
+
+.btn
+  @extend %btn
+  &:hover
+    background-color: rgb(203,4,118)
+    @include filter-gradient(#cb0476, #9c0059, vertical)
+    @include background-image(linear-gradient(top,  rgb(203,4,118) 50%,rgb(156,0,89) 50%))
+
+  &.read-more
+    float: right
+    width: 144px
+    height: 46px
+    margin-right: 20px
+    margin-bottom: 20px
+    line-height: 46px
+    padding-left: 15px
+    
+    span
+      position: relative
+      &:after
+        content: url(#{$src}small-arrow-white.png)
+        position: absolute
+        right: -33px
+        margin-top: -1px
+  &.kv-btn
+    width: 244px
+    height: 54px
+    font-size: 17px
+    line-height: 54px
+    padding-left: 30px
+    margin-top: 31px
+    span
+      position: relative
+      &:after
+        content: url(#{$src}btn-arrow.png)
+        position: absolute
+        right: -41px
+        margin-top: 1px
+        

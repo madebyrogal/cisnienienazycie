@@ -1,0 +1,24 @@
+acard_backend_index:
+    pattern: /
+    defaults: { _controller: AcardBackendBundle:Page:list }
+
+acard_backend_page:
+    resource: "@AcardBackendBundle/Resources/config/routing/page.yml"
+acard_backend_city:
+    resource: "@AcardBackendBundle/Resources/config/routing/city.yml"
+acard_backend_event:
+    resource: "@AcardBackendBundle/Resources/config/routing/event.yml"
+acard_backend_video:
+    resource: "@AcardBackendBundle/Resources/config/routing/video.yml"
+acard_backend_gallery:
+    resource: "@AcardBackendBundle/Resources/config/routing/gallery.yml"
+acard_backend_custom_field:
+    resource: "@AcardBackendBundle/Resources/config/routing/custom_field.yml"
+acard_backend_news:
+    resource: "@AcardBackendBundle/Resources/config/routing/news.yml"
+acard_backend_gallery_news:
+    resource: "@AcardBackendBundle/Resources/config/routing/gallery_news.yml"
+acard_backend_competition:
+    resource: "@AcardBackendBundle/Resources/config/routing/competition.yml"
+acard_backend_surgeries:
+    resource: "@AcardBackendBundle/Resources/config/routing/surgeries.yml"

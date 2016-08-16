@@ -1,0 +1,28 @@
+<div class="m-movies-select">
+
+    {% if video1 %}
+        <div class="videoItem pull-left video-one" data-videoid="{{ video1 }}">
+            <img src="{{ asset('bundles/acardfrontend/img/movie-arrow.png') }}" class="Videoarrow" alt="Odtwórz film">
+        </div>
+    {% endif %}
+
+    {% if video2 %}
+        <div class="videoItem pull-right video-two" data-videoid="{{ video2 }}">
+            <img src="{{ asset('bundles/acardfrontend/img/movie-arrow.png') }}" class="Videoarrow" alt="Odtwórz film">
+        </div>
+    {% endif %}
+
+</div>
+
+{% if video1 %}
+    <div id="player" data-mainvideoid="{{ video1 }}"></div>
+    <div class="controlBar">
+        <div class="progressBar">
+            <div class="drag"></div>
+        </div>
+        <div class="volumeControl pull-right">
+            <img src="{{ asset('bundles/acardfrontend/img/volumeup.png') }}" id="volumeup" alt="Zwiększ głośność">
+            <img src="{{ asset('bundles/acardfrontend/img/volumedown.png') }}" id="volumedown" alt="Zmniejsz głośność">
+        </div>
+    </div>
+{% endif %}

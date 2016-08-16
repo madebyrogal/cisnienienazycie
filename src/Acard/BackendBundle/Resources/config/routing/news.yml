@@ -1,0 +1,12 @@
+acard_backend_news_index:
+    pattern:  /news
+    defaults: { _controller: AcardBackendBundle:News:index }
+acard_backend_news_create:
+    pattern:  /news/create
+    defaults: { _controller: AcardBackendBundle:News:create }
+acard_backend_news_edit:
+    pattern:  /news/{id}
+    defaults: { _controller: AcardBackendBundle:News:edit }
+acard_backend_news_delete:
+    pattern:  /news/delete/{id}
+    defaults: { _controller: AcardBackendBundle:News:delete }

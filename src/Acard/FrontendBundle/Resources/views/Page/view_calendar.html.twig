@@ -1,0 +1,50 @@
+{% extends "AcardFrontendBundle::layout.html.twig" %}
+
+{% block body_css_class %}home-page{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/acardfrontend/js/box_scroll.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    {{ include('AcardFrontendBundle:_Partials:stats_small.html.twig', {}) }}
+    {{ include('AcardFrontendBundle:_Partials:map.html.twig', {}) }}
+    {% block content %}
+        <section class="m-events-list-wrapper">
+            <div class="wrapper">
+                <div class="m-events-list events-upcoming">
+                    <header>
+                        Najbliższe badania
+                    </header>
+                    <div class="m-events-list-items">
+                        {% for futureEvent in futureEvents %}
+                            <div class="m-events-list-item marker pull-left">
+                                <b class="violet">{{ futureEvent.city.label }}, {{ futureEvent.startDate|date('Y.m.d') }}</b><br>
+                                <b>{{ futureEvent.place }}<br>{{ futureEvent.address }}</b><br>
+			       			<span class="eventHours">
+			       				{{ futureEvent.timeDetails|nl2br }}
+							</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="m-events-list events-past">
+                    <header>
+                        Tu już byliśmy
+                    </header>
+                    <div class="m-events-list-items">
+                        {% for pastEvent in pastEvents %}
+                            <div class="m-events-list-item marker pull-left">
+                                <b class="violet">{{ pastEvent.city.label }}, {{ pastEvent.startDate|date('Y.m.d') }}</b><br>
+                                <b>{{ pastEvent.place }}<br>{{ pastEvent.address }}</b><br>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+    {{ include('AcardFrontendBundle:_Partials:teasers.html.twig', {}) }}
+{% endblock %}
+

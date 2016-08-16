@@ -1,0 +1,631 @@
+li.menu-menu
+  background-color: #494a52
+.close-trigger
+  position: absolute
+  top: 15px
+  right: 15px
+.mm-menu#menu
+  background-color: #656671
+  ul
+    padding-top: 0
+  li
+    height: 65px
+    line-height: 65px
+    a, span
+      color: $white
+      font-family: $klavika
+      font-size: 22px
+.nav-toggle
+  img
+    position: absolute
+    right: 0
+  span
+    margin-right: 45px  
+@media (max-width: $adjustFooter)
+  .footer-col
+    width: 24%
+
+@media (max-width: $tablet)
+  /* general rules for mobile */
+  \::-webkit-input-placeholder
+    color: #888a99
+
+  \::-moz-placeholder
+    color: #888a99
+
+  \:-ms-input-placeholder
+    color: #888a99
+
+
+
+
+  .extra-links, .m-subnav
+    display: none
+  body
+    background-image: none
+    background-color: #e8eaf0
+    padding: 0 20px
+  .nav-toggle, .article-list-dropdown
+    display: block
+  .m-grey-header
+    .brand
+      width: 100%
+      position: absolute
+      img
+        margin-right: 9px
+      span
+        font-size: 30px
+        position: relative
+        top: 2px
+
+  .articles-page
+    .m-product-slider
+      display: none
+
+
+  /*home, mobules*/
+  
+  .m-filter-box
+    padding: 0
+    #sort-info
+      margin-right: 0
+      margin-top: 5px
+    .selectBox
+      width: 40.8%
+    .selectArrow
+      position: absolute
+    .selectTrigger, .selectOptionsWrapper
+      max-width: none
+      
+  .m-article-list
+    width: 100%
+    display: -webkit-box
+    display: -moz-box
+    display: -webkit-flexbox
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-box-orient: horizontal
+    -moz-box-orient: horizontal
+    -webkit-box-direction: normal
+    -moz-box-direction: normal
+    -webkit-flex-direction: column
+    -ms-flex-direction: column
+    flex-direction: column
+  .m-articles-list.wrapper
+    padding: 0
+  .m-article-list-item, .m-drugs-database-item
+    width: 32%
+  .m-article-list-item
+    margin-bottom: 9.3%
+  .m-drugs-database-item
+    .selectBox
+      padding: 0 10px
+    .selectTrigger
+      margin-left: 0
+     
+    .selectOptionsWrapper
+      margin-left: 0
+      width: 90%
+  .m-drugs-database-img
+    width: 100%
+
+  .bottomElements
+    padding: 0
+    margin-top: 37px !important
+  .m-newsletter, .m-product-slider
+    max-width: none
+    width: 100%
+    margin-left: 0
+    left: 0
+  .m-newsletter
+    height: 85px
+    .m-newsletter-header
+      float: left
+      font-size: 22px
+      line-height: 45px
+    form
+      float: right
+      width: 75%
+      input
+        max-width: 70%
+        margin-top: 0
+
+  .m-product-slider
+    background-image: none
+    background-color: $white
+    margin-top: 10px
+    height: 152px
+    margin-top: 4px
+    &:before
+      top: -16px
+    .m-product-slider-left-col
+      width: 41.6667%
+      margin-top: 0
+    .m-product-slider-img
+      right: 151px
+      margin-top: 20px
+      img
+        width: 80%
+      a
+        bottom: 41px
+        right: -148px
+    ul li
+      height: 150px
+    #slide-next a
+      right: 115px
+      top: 20px
+    #slide-prev a
+      left: 337px
+      top: 20px
+
+  .m-drug-list-item
+    margin-bottom: 9.3%
+    .m-drug-list-name
+      font-weight: bold
+  .m-drug-list-header
+    span
+      text-transform: uppercase  
+  footer
+    margin-top: 21px
+  /* articles */
+  .subpage-content
+    padding: 0
+  aside.col-sm-4
+    width: 100%
+    max-width: none
+    margin-bottom: 20px
+    overflow: visible
+    #subnav, .m-product-teaser
+      display: none
+  .article-wrapper
+    max-width: none
+    width: 100%
+    padding-left: 0
+  
+  .m-content-submenu a
+    margin: 0 10px 10px 0
+    padding: 15px
+    border: solid 1px #d5dfe3
+    border-bottom: solid 2px #d5dfe3
+    width: 49%
+    &:nth-of-type(odd)
+      float: right
+      margin-right: 0
+  .m-drugs-recommended
+    display: block
+    .m-product-teaser
+      margin-bottom: 61px
+      img
+        margin-bottom: 10px
+      &:after
+        display: none
+      .check-btn
+        bottom: -55px
+
+  .article-list-dropdown
+    border: solid 20px $white
+    .selectTrigger, .selectOptionsWrapper
+      max-width: none
+    .selectArrow
+      position: absolute
+      right: 0
+      top: 0
+      margin-right: 0
+      background-image: url(#{$src}select-arrow.jpg)      
+    .selectOptionsWrapper
+      overflow-y: scroll
+      position: relative
+      border-bottom: 1px solid #D6DFE3
+      &::-webkit-scrollbar
+        width: 12px
+        height: 12px
+      &::-webkit-scrollbar-track
+        background: #fefefe
+      &::-webkit-scrollbar-thumb
+        background: #a0a2b2
+    .selectOptions
+      max-height: 350px
+     
+    .selectOption
+      line-height: 20px
+      min-height: 42px
+      height: auto
+      padding-top: 5px
+      padding-bottom: 5px
+      a
+        display: block
+        width: 100%
+        height: 100%
+        color: #494a52
+      &:last-of-type
+        border-bottom: 0 none
+
+  .m-related-article-desc
+    width: 50% 
+  #sort-articles
+    margin-left: 10px
+    
+@media (min-width: $iphone) and (max-width: $tablet)
+  footer, .m-grey-header
+    left: 0px 
+    
+@media (min-width: $legendary) and (max-width: $mobileabove)
+  footer, .m-grey-header
+    left: -20px    
+@media (min-width: $legendary) and (max-width: $belovIpad)
+  .m-article-img-box, .nav-toggle span, .breadcrumbs-nav, #sort-info
+    display: none 
+  .mm-page
+    width: 100%
+    padding: 0 20px
+    min-width: 320px
+    max-width: 480px
+    margin: 0 auto
+    overflow: hidden
+  body
+    padding: 0
+    font-size: 16px
+  .m-grey-header .brand span
+    font-size: 25px
+  .small-label
+    text-align: left !important
+  .nav-toggle
+    font-size: 16px
+    img
+      width: 28px
+      top: 21px
+  .m-article-list-item, .m-drugs-database-item
+    width: 100%
+    margin-left: 0 !important
+    a
+      font-size: 19px
+ 
+  //.m-article-list-item
+    //&:not(:first-of-type)
+      //display: none
+  .m-filter-box
+    .selectBox
+      width: 100%
+    .selectArrow
+      margin-right: 0
+      right: 0
+    .selectOptionsWrapper
+      max-width: none
+  #sort-articles
+    margin-left: 0
+    margin-top: 10px
+    width: 100%
+    background-image: url(#{$src}sort-wide.png)
+    background-repeat: no-repeat
+    -webkit-background-size: contain
+    background-size: contain
+    height: 69px
+ 
+    
+  footer
+    
+    .footer-col
+      width: 100%
+      max-width: none
+      margin-top: -2px
+    a.col-header
+      margin-top: -1px
+      border-top: 1px solid #585B64
+  
+  .home-page
+    .m-articles-list
+      margin-top: 10px
+      
+  .grey-header
+    margin-bottom: 0
+    
+  .m-article-page-header
+    padding-top: 8px
+    min-height: 69px
+    height: auto
+  .m-article-intro
+    margin-bottom: 20px
+
+
+  .m-related-article
+    margin-bottom: 64px
+    .m-related-article-img
+      max-width: none
+    .m-related-article-desc
+      margin-left: 0
+      font-size: 16px
+      .m-related-article-info
+        padding-top: 0
+        border: 0 none
+        margin: 10px 0 20px 0
+    .m-related-article-title
+      margin-bottom: 10px
+    .m-related-article-read-more
+      transition: none
+      width: 150px
+      font-size: 15px
+      line-height: 43px
+      padding-left: 10px
+      height: 51px
+      color: $white
+      background: url(#{$src}read-more.png)
+      bottom: -52px
+      right: 0
+      &:after
+        display: none
+    div
+      width: 100%
+
+  .m-drugs-recommended
+    margin-top: 14px
+    .grey-header
+      &:before
+        color: #494A52
+        content: "REKLAMA"
+        float: left
+        font-size: 12px
+        font-family: $klavika
+        position: absolute
+        top: -46px
+        left: 0px
+    .m-product-teaser.wide-item
+      width: 100%
+      margin-bottom: 52px
+      .check-btn
+        bottom: -55px
+      &:before
+        display: none
+
+
+  .m-newsletter
+    margin-top: 0
+    padding-top: 0
+    height: auto
+    padding: 0
+    background-image: none
+    #newsletter
+      width: 100%
+      input
+        width: 100%
+        max-width: 100%
+      .input-wrap
+        padding: 20px
+        display: table
+        width: 100%
+        background-color: $white
+    span
+      width: 100%
+      display: block
+      padding: 10px
+      text-transform: uppercase
+      font-size: 28px
+      background-image: url(#{$src}newsletter-bg.png)
+      -webkit-background-size: cover
+      background-size: cover
+
+  .m-drugs-database-category, .m-drugs-database-img
+    display: none
+  .m-drugs-database-item
+    width: 100%
+    margin-bottom: 0
+    margin-left: 0
+    border: 0 none !important
+    &:last-of-type
+      border-bottom: 10px solid #FFFFFF !important
+    .selectOptionsWrapper
+      position: relative
+      max-width: none
+      width: 99%
+    .selectTrigger
+      color: $white
+      height: 71px
+      font-size: 25px
+      line-height: 71px
+      max-width: none
+      width: 100%
+      box-shadow: none
+    .selectOption
+      line-height: 60px
+      height: 60px
+      font-size: 18px
+    .selectArrow
+      background-position: 0 0
+      background-image: url(#{$src}arrow-big.png)
+      background-repeat: no-repeat
+      width: 15px
+      right: 21px
+      top: 34px
+      &.toggled
+        width: 22px
+        background-position: -15px 0
+    &.kardiologia
+      .selectTrigger
+        background-color: #e64e40
+        @include filter-gradient(#e64e40, #d3473a, vertical)
+        @include background-image(linear-gradient(top,  #e64e40 0%,#d3473a 100%))
+    &.neurologia
+      .selectTrigger
+        background-color: #1ba1d9
+        @include filter-gradient(#1ba1d9, #1996cd, vertical)
+        @include background-image(linear-gradient(top,  #1ba1d9 0%,#1996cd 100%))
+    &.okulistyka
+      .selectTrigger
+        background-color: #f39b11
+        @include background-image(linear-gradient(bottom, rgba(176,107,10,.3) -25%, rgba(241,146,14,0) 125%))
+    &.gastrologia
+      .selectTrigger
+        background-color: #da5caa
+        @include background-image(linear-gradient(bottom, rgba(163,63,122,.3) -25%, rgba(213,82,160,0) 125%))
+    &.psychiatria
+      .selectTrigger
+        background-color: #19c39f
+        @include background-image(linear-gradient(bottom, rgba(16,133,107,.3) -25%, rgba(23,190,153,0) 125%))
+
+    .see-all
+      display: none
+  .m-content-submenu
+    a
+      width: 100%
+  .m-article-item-desc
+    font-size: 16px
+  .m-product-slider
+    height: auto
+    padding: 0
+    
+    min-height: 152px
+    ul li
+      height: auto
+      min-height: 152px
+      width: 100%
+      overflow: hidden
+    #slide-prev
+      a
+        right: 60px
+        left: auto
+    #slide-next
+      a
+        right: 10px
+    .m-product-slider-desc
+      font-size: 16px
+    .m-product-slider-img
+      position: relative
+      width: 90%
+      right: 0
+      float: left !important
+      left: 0
+      margin: 20px 0 0 0
+      img
+        width: auto
+        margin: 0 auto
+      .check-btn
+        position: absolute
+        bottom: -48px
+        right: 0
+    .m-product-slider-item
+      .m-product-slider-left-col
+        width: 90%
+        padding-left: 12px
+  .m-filter-box-select
+    .selectTrigger
+      max-width: none
+  .m-article-list-item
+    margin-bottom: 23.3%
+    .m-article-item-category 
+      height: 55px
+      padding-top: 0px
+      line-height: 55px
+  
+  .m-drugs-database
+    padding: 0
+  /* form, konkurs */
+  .m-contest-rules
+    border: 0
+    background: transparent
+    padding: 0
+   
+      
+  .m-contest-rules b, .contest-form-ind
+    width: 100%
+    border-bottom: solid 1px #d6dfe3
+    border-top: solid 1px #d6dfe3
+    line-height: 41px
+  #send-form
+    bottom: -85px    
+  .radio, .checkbox
+    min-height: 39px
+  .form-group
+    margin-bottom: 23px
+  .form-group-header
+    font-size: 15px
+  input[type="radio"] + label, .formInput input[type="checkbox"] + label
+    font-size: 15px !important
+    
+    span.check 
+      width: 40px !important
+      height: 40px !important
+      background: url(#{$src}radio_sheet_mobile.jpg) 0px 0 no-repeat !important
+    .check-desc
+      font-size: 15px !important
+      top: 4px !important
+      margin-left: 52px !important
+  input[type="radio"]:checked + label, .formInput[type="checkbox"]:checked + label
+    span.check
+      background: url(#{$src}radio_sheet_mobile.jpg) -40px 0px no-repeat !important
+      
+
+  #thankyou-form
+    .form-group
+      margin-bottom: 0px
+      .legal-form
+        margin-left: 0 !important
+        padding-left: 0
+      label, .small-label
+        position: relative
+        width: 100%
+        top: 0
+        margin-bottom: 9px
+        margin-top: 15px
+        margin-left: 0
+        &.checkbox
+          margin-right: 0
+      div[class*=col]
+        width: 100%
+      input.col-sm-9, .middle-input, .short-input
+        width: 100%
+        margin: 0
+      input.limited
+        width: 28px
+      .formInput
+        margin-top: 20px
+        &:first-of-type
+          margin-top: -10px
+      .check-desc
+        position: absolute
+        padding-right: 20px
+        left: 0 
+
+  .m-table
+    .m-table-header
+      display: none
+    .m-table-row
+      border-top: solid 1px #d6dfe3
+      padding: 10px 0
+      background-color: $white
+      .m-table-row-item
+        width: 100%
+        background-color: $white
+        border: 0 none
+        font-size: 16px
+        line-height: 30px
+        height: 36px
+        padding-left: 0
+        &:first-of-type
+          text-align: left
+          font-weight: bold
+          &:before
+            content: "Miejsce:"
+            
+        &:nth-of-type(2n+2), &:nth-of-type(3n+3)
+          float: left
+          display: table
+          padding-right: 10px
+          width: auto
+        &:last-of-type
+          width: 100%
+
+  .m-content p, .light-desc, .light-desc p
+    font-size: 16px
+  .legal-form p
+    line-height: 19px
+  .m-content p.medical-warning    
+    font-size: 14px
+    line-height: 18px  
+
+  .m-drug-list-bytype
+    .m-drug-list-item
+      width: 100%
+      margin-right: 0
+      margin-bottom: 21.3%
+      &:last-of-type
+        margin-bottom: 18%

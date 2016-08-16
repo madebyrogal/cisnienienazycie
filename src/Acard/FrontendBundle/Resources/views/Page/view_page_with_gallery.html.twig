@@ -1,0 +1,29 @@
+{% extends "AcardFrontendBundle::page_layout.html.twig" %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/acardfrontend/js/box_scroll.js') }}"></script>
+{% endblock %}
+
+
+{% block body %}
+    {{ include('AcardFrontendBundle:_Partials:stats_small.html.twig', {}) }}
+    <section class="page-content">
+        <div class="wrapper">
+            <div class="col-sm-8 page-content-article">
+                {% block content %}
+                    <div class="col-sm-8 page-content-article {{ page.wrapperCssClass }}">
+                        {{ page.text|raw }}
+                    </div>
+                {% endblock %}
+            </div>
+            {{ include('AcardFrontendBundle:_Partials:right_pane.html.twig', {}) }}
+        </div>
+    </section>
+    {{ include('AcardFrontendBundle:_Partials:modal_video.html.twig', {}) }}
+
+
+    {{ render(controller('AcardFrontendBundle:Gallery:get')) }}
+    {{ include('AcardFrontendBundle:_Partials:teasers.html.twig', {}) }}
+
+{% endblock %}

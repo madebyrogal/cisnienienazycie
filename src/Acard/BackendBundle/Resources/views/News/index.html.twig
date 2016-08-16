@@ -1,0 +1,30 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}AcardBackendBundle:Page:index{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Zdjęcie</th>
+            <th>Tytuł</th>
+            <th>Publikacja od</th>
+            <th>Ukryta</th>
+            <th>Akcja</th>
+        </tr>
+        {% for n in news %}
+            <tr>
+                <td><img src="/uploads/news/{{ n.fileThumb1 }}" alt="miniatura" width="100"/></td>
+                <td>{{ n.title }}</td>
+                <td>{{ n.dateFrom|date("Y-m-d") }}</td>
+                <td>{{ n.hidden }}</td>
+                <td>
+                    <a href="{{ path('acard_backend_news_edit', {'id': n.id}) }}">Edytuj</a>
+                    <a href="{{ path('acard_backend_news_delete', {'id': n.id}) }}" onclick="return confirm('Na pewno?')">Usuń</a>
+                    <a href="{{ path('acard_backend_gallery_news_index', {'newsId': n.id}) }}">Galeria</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br class="clear">
+    <a href="{{ url('acard_backend_news_create') }}" class="create-new">Dodaj nowe</a>
+{% endblock %}

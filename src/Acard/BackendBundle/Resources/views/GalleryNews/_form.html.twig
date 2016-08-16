@@ -1,0 +1,29 @@
+{{ form_start(form) }}
+<table>
+    <tr>
+        <td width="200" class="label">{{ form_label(form.file) }}</td>
+        <td>
+            {{ form_widget(form.file) }}
+            {% if form.file.vars.errors|length %}
+                <br>{{ form_errors(form.file) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.alt) }}</td>
+        <td>
+            {{ form_widget(form.alt) }}
+            {% if form.alt.vars.errors|length %}
+                <br>{{ form_errors(form.alt) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label"></td>
+        <td>
+            {{ form_widget(form.submit) }}
+        </td>
+    </tr>
+</table>
+
+{{ form_end(form) }}

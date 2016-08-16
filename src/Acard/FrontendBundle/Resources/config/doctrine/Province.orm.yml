@@ -1,0 +1,10 @@
+Acard\FrontendBundle\Entity\Province:
+    type: entity
+    table: provinces
+    id:
+        id:
+            type: integer
+            generator: { strategy: auto }
+    fields:
+        name:   { type: string(40), nullable: false }
+        label:   { type: string(40), nullable: false }

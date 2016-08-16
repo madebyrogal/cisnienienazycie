@@ -1,0 +1,11 @@
+Acard\FrontendBundle\Entity\Video:
+    type: entity
+    table: videos
+    id:
+        id:
+            type: integer
+            generator: { strategy: auto }
+    fields:
+        label:  { type: string(40), nullable: false }
+        url:    { type: string(120), nullable: false }
+        poster: { type: string(255), nullable: false }

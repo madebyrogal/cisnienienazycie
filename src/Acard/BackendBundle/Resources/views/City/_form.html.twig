@@ -1,0 +1,48 @@
+{{ form_start(form) }}
+<table>
+    <tr>
+        <td class="label">{{ form_label(form.label) }}</td>
+        <td>
+            {{ form_widget(form.label) }}
+            {% if form.label.vars.errors|length %}
+                <br>{{ form_errors(form.label) }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ form_label(form.province) }}</td>
+        <td>
+            {{ form_widget(form.province) }}
+            {% if form.province.vars.errors|length %}
+                <br>{{ form_errors(form.province) }}
+            {% endif %}
+        </td>
+    </tr>
+
+    {{ form_widget(form.lat) }}
+    {{ form_widget(form.lng) }}
+
+    <tr>
+        <td colspan="2">
+            {% if (form.vars.data.lat and form.vars.data.lng) %}
+                {{ form_widget(form.submit) }}
+            {% else %}
+                {{ form_widget(form.submit, {'attr': {'disabled': 'disabled'} }) }}
+            {% endif %}
+            {{ form_widget(form.find_location) }}
+        </td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td id="locationsWrapper" colspan="2"></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td id="map" colspan="2" style="width:800px;height:600px;"></td>
+        <td></td>
+    </tr>
+</table>
+
+{{ form_end(form) }}

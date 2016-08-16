@@ -1,0 +1,9 @@
+acard_backend_competition_index:
+    pattern: /competition/index
+    defaults: { _controller: AcardBackendBundle:Competition:index }
+acard_backend_competition_show:
+    pattern: /competition/{id}/show
+    defaults: { _controller: AcardBackendBundle:Competition:show }
+acard_backend_competition_delete:
+    pattern: /competition/{id}/delete
+    defaults: { _controller: AcardBackendBundle:Competition:delete }

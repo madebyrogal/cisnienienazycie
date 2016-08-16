@@ -1,0 +1,17 @@
+<div class="pull-right text-right m-kv-counter">
+    <div>
+        {% for digit in examination_count|split('') %}
+            <span class="counter counter_{{ digit }}">{{ digit }}</span>
+        {% endfor %}
+        <br style="clear:both">
+    </div>
+    <div class="m-kv-counter-intro">
+        Przebadanych serc
+    </div>
+    <div class="m-kv-counter-about">
+        Sponsorem kampanii jest Polfa<br>
+        Warszawa Grupa Polpharma
+
+        <img src="{{ asset('bundles/acardfrontend/img/acard-logo.png') }}" alt="Acard">
+    </div>
+</div>

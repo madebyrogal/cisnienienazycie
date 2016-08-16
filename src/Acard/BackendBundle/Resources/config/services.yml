@@ -1,0 +1,5 @@
+services:
+    acard.frontend.action_listener:
+        class: Acard\FrontendBundle\EventListener\ControllerEventListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }

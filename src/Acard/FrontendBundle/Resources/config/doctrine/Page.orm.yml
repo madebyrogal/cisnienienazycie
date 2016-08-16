@@ -1,0 +1,21 @@
+Acard\FrontendBundle\Entity\Page:
+    type: entity
+    table: pages
+    id:
+        id:
+            type: integer
+            generator: { strategy: auto }
+    fields:
+        name:              { type: string(255) }
+        meta_title:        { type: string(255), nullable: true }
+        meta_description:  { type: string(255), nullable: true }
+        meta_keywords:     { type: string(255), nullable: true }
+        url_title:         { type: string(255) }
+        text:              { type: text }
+        is_editable:       { type: boolean }
+        wrapper_css_class: { type: string(255), nullable: true }
+
+    manyToOne:
+        page_template:
+            targetEntity: Acard\FrontendBundle\Entity\PageTemplate
+

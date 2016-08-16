@@ -1,0 +1,13 @@
+Acard\FrontendBundle\Entity\GalleryElement:
+    type: entity
+    table: gallery_elements
+    id:
+        id:
+            type: integer
+            generator: { strategy: auto }
+    fields:
+        label:          { type: string(255), nullable: false }
+        file:           { type: string(255), nullable: false }
+        thumbnail_file: { type: string(255), nullable: false }
+
+

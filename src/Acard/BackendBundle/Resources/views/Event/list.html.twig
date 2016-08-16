@@ -1,0 +1,23 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Acard - Lista wydarzeń{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Akcja</th>
+        </tr>
+        {% for event in events %}
+            <tr>
+                <td>{{ event.place }} ({{ event.city.label }}, {{ event.city.province.label }})</td>
+                <td>
+                    <a href="{{ path('acard_backend_event_edit', {'id': event.id}) }}">Edytuj</a>
+                    <a href="{{ path('acard_backend_event_delete', {'id': event.id}) }}" onclick="return confirm('Na pewno?')">Usuń</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br class="clear">
+    <a href="{{ url('acard_backend_event_create') }}" class="create-new">Dodaj nowe</a>
+{% endblock %}

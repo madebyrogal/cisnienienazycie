@@ -1,0 +1,12 @@
+acard_backend_event_index:
+    pattern:  /event
+    defaults: { _controller: AcardBackendBundle:Event:list }
+acard_backend_event_create:
+    pattern:  /event/create
+    defaults: { _controller: AcardBackendBundle:Event:create }
+acard_backend_event_edit:
+    pattern:  /event/{id}
+    defaults: { _controller: AcardBackendBundle:Event:edit }
+acard_backend_event_delete:
+    pattern:  /event/delete/{id}
+    defaults: { _controller: AcardBackendBundle:Event:delete }

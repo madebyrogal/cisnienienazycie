@@ -1,0 +1,53 @@
+{% extends "AcardBackendBundle::layout.html.twig" %}
+
+{% block title %}Acard - Edycja wydarzenia{% endblock %}
+
+{% block body %}
+    {{ include('AcardBackendBundle:Event:_form.html.twig') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+
+        {% if form.vars.data.city %}
+            currentProvince = '{{ form.vars.data.city.province.label }}';
+            currentCity = '{{ form.vars.data.city.label }}';
+        {% else %}
+            currentProvince = '';
+            currentCity = '';
+        {% endif %}
+
+        lat = '{{ form.vars.data.lat }}' || 52.2333;
+        lng = '{{ form.vars.data.lng }}' || 21.0167;
+        mapSelector = 'map';
+        locationsWrapperSelector = '#locationsWrapper';
+        findLocationButtonSelector = '#event_find_location';
+        submitButtonSelector = '#event_submit';
+        formLatSelector = '#event_lat';
+        formLngSelector = '#event_lng';
+        markers = [];
+
+        function getLocationQueryString() {
+            return $('#event_address').val() + ', ' + currentCity + ', ' + currentProvince;
+        }
+
+        $(document).ready(function(){
+            $('#event_city').on('change', function(){
+                var $this = $(this);
+                $('#event_lat').attr('value', '');
+                $('#event_lng').attr('value', '');
+                $('#event_submit').attr('disabled', 'disabled');
+
+                $.get('{{ url('acard_backend_city_info_template') }}' + $this.find('option:selected').val()).success(function(data){
+                    if (data.status === 'error') {
+                        alert('Och noooo! Wystąpił błąd. Spróbuj ponownie później.');
+                    }
+                    currentCity = data.data.label;
+                    currentProvince = data.data.province.label;
+                });
+            });
+        });
+    </script>
+    <script src="{{ asset('bundles/acardbackend/js/map_picker.js') }}"></script>
+{% endblock %}
