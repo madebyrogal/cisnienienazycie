@@ -1,6 +1,6 @@
 <section class="flexslider">
     <ul class="slides">
-        <li>
+        {#<li>
             <div class="m-kv kv-large clearfix" style="background-image: url( {{asset('bundles/acardfrontend/img/header3.jpg')}} );">
                 <div class="wrapper dt">
                     <div class="col-sm-6 pull-left m-kv-intro">
@@ -16,7 +16,7 @@
                     {{ include('AcardFrontendBundle:_Partials:counter.html.twig', {}) }}
                 </div>
             </div>
-        </li>
+        </li>#}
         <li>
             <div class="m-kv kv-large clearfix" style="background-image: url( {{asset('bundles/acardfrontend/img/header.jpg')}} );">
                 <div class="wrapper dt">
@@ -24,7 +24,7 @@
                         <h1 class="claim pull-left">kampania<br>ciśnienie na życie</h1>
                         <p>
                             W ramach kampanii „Ciśnienie na życie” możesz dokonać bezpłatnego pomiaru ciśnienia krwi.
-                            <b>Terminy akcji w Twojej miejscowości opublikujmy już wkrótce!</b>
+                            {#<b>Terminy akcji w Twojej miejscowości opublikujmy już wkrótce!</b>#}
                         </p>
                         <a href="{{ url('acard_frontend_page_view', {'pageUrl': 'o-kampanii'}) }}" class="btn kv-btn"><span>Więcej o kampanii</span></a>
                     </div>
