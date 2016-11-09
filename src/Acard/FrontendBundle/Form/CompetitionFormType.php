@@ -40,7 +40,8 @@ class CompetitionFormType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Acard\FrontendBundle\Entity\CompetitionForm'
+            'data_class' => 'Acard\FrontendBundle\Entity\CompetitionForm',
+            'csrf_protection' => false,
         ));
     }
 
