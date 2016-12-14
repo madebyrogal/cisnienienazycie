@@ -39,18 +39,18 @@
                 <li>
                     {% set cssClass = (page.name == 'acard') ? 'current' : '' %}
                     <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'acard'}) }}">Acard</a>
-                </li>
-                <!-- <li>
-                    {% set cssClass = (page.name == 'samorzad-od-serca') ? 'current' : '' %}
-                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'samorzad-od-serca'}) }}">Samorząd od serca</a>
-                </li> -->
+                </li>                
                 <li>
                     {% set cssClass = (page.name == 'konkurs') ? 'current' : '' %}
                     <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'konkurs'}) }}">Konkurs</a>
                 </li>
+                {#<li>
+                    {% set cssClass = (page.name == 'samorzad-od-serca') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_konkurs_index') }}">Samorząd od serca</a>
+                </li>#}
                 <li>
-                    {% set cssClass = (page.name == 'formularz-konkursowy') ? 'current' : '' %}
-                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'formularz-konkursowy'}) }}">Samorząd od serca</a>
+                    {% set cssClass = (page.name == 'samorzad-od-serca') ? 'current' : '' %}
+                    <a class="{{ cssClass }}" href="{{ path('acard_frontend_page_view', {'pageUrl': 'samorzad-od-serca'}) }}">Samorząd od serca</a>
                 </li>
             </ul>
         </nav>
