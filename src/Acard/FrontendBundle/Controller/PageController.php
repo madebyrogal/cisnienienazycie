@@ -41,6 +41,8 @@ class PageController extends Controller
         if (!in_array($pageName, array('main', 'calendar'))) {
             if ($pageName === 'about') {
                 return $this->render('AcardFrontendBundle:Page:view_page_with_gallery.html.twig', $viewParams);
+            } elseif($pageName === 'samorzad-od-serca') {
+                return $this->render('AcardFrontendBundle:Page:samorzad-od-serca.html.twig', $viewParams);
             } else {
                 return $this->render('AcardFrontendBundle:Page:view_page.html.twig', $viewParams);
             }
